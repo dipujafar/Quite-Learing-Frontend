@@ -1,14 +1,24 @@
-import ShinyText from "@/components/ShinyText";
+
 
 export default function NavActionButton() {
   return (
     <div className="flex items-center gap-x-2">
-      <ShinyText
-        text="Post An Assignment"
-        disabled={false}
-        speed={3}
-        className="custom-class"
-      />
+      <button className="relative h-12 px-8 rounded-full overflow-hidden transition-all duration-500 group cursor-pointer">
+        <div className="absolute inset-0 rounded-full p-[2px] bg-[#584c22]">
+          <div className="absolute inset-0 bg-[#584c22] rounded-full opacity-90" />
+        </div>
+        <div className="absolute inset-[2px] bg-[#ffffff] rounded-lg opacity-95" />
+        <div className="absolute inset-[2px] bg-gradient-to-r from-[#938557] via-[#9d926c] to-[#a69b73] rounded-lg opacity-90" />
+        <div className="absolute inset-[2px] bg-gradient-to-r from-[#706232] via-[#584c22] to-[#4c411b]/30 rounded-lg opacity-80" />
+        <div className="absolute inset-[2px] bg-gradient-to-r from-[#5f5123] via-[#584b1d] to-[#4c411b]/50 rounded-lg" />
+        <div className="absolute inset-[2px] shadow-[inset_0_0_15px_rgba(199,135,246,0.15)] rounded-lg" />
+        <div className="relative flex items-center justify-center gap-2">
+          <span className="text-lg font-normal bg-gradient-to-b from-[#50451f] to-[#53471e] bg-clip-text  drop-shadow-[0_0_12px_rgba(199,135,246,0.4)] tracking-tighter text-white cursor-pointer">
+            Post An Assignment
+          </span>
+        </div>
+        <div className="absolute inset-[2px] opacity-0 transition-opacity duration-300 bg-gradient-to-r from-[#6b4682]/20 via-[#836897]/10 to-[#2A1736]/20 group-hover:opacity-100 rounded-lg" />
+      </button>
 
       <button className="flex justify-center gap-2 items-center border-primary-color mx-auto relative px-4 py-2 cursor-pointer overflow-hidden rounded-[30px] border-2 bg-transparent text-primary-color font-bold  transition-all duration-1000 ease-in-out hover:shadow-[1px_1px_200px_#584c22] hover:text-white hover:border-none after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[10px] after:w-[10px] after:rounded-[30px] after:bg-primary-color after:invisible after:transition-all after:duration-1000 after:ease-in-out hover:after:visible hover:after:scale-[100] hover:after:translate-x-[2px] after:-z-10 z-10 group">
         <span>Become a Worker</span>

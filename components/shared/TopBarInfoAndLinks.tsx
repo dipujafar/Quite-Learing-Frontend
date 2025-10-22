@@ -41,7 +41,7 @@ export default function TopBarInfoAndLinks() {
         <div className="flex items-center gap-x-4">
           {quickLink.map((link, index) => (
             <Link key={index} href={link.href}>
-              <div className="bg-primary-white/10 p-2.5 rounded-full">{link.icon}</div>
+              <div className="bg-primary-white/10 p-2.5 rounded-full hover:shadow-[1px_1px_100px_#584c22]">{link.icon}</div>
             </Link>
           ))}
         </div>

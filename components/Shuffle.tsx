@@ -1,3 +1,4 @@
+"use client"
 import React, { useRef, useEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -348,15 +349,15 @@ const Shuffle: React.FC<ShuffleProps> = ({
     }
   );
 
-  const baseTw = 'inline-block whitespace-normal break-words will-change-transform uppercase text-[4rem] leading-none';
+  const baseTw = 'inline-block whitespace-normal break-words will-change-transform uppercase text-[1rem] leading-none';
   const commonStyle: React.CSSProperties = {
     textAlign,
-    fontFamily: `'Press Start 2P', sans-serif`,
     ...style
   };
 
   const classes = `${baseTw} ${ready ? 'visible' : 'invisible'} ${className}`.trim();
-  const Tag = (tag || 'p') as keyof JSX.IntrinsicElements;
+  
+  const Tag = (tag || 'p') ;
 
   return React.createElement(Tag, { ref: ref as any, className: classes, style: commonStyle }, text);
 };

@@ -5,6 +5,7 @@
   --color-primary-color: #584c22;
   --color-primary-black: #0d0d0d;
   --color-primary-white: #fff;
+  --color-primary-gray: #969696;
 }
 @keyframes shine {
   0% {
@@ -131,12 +132,6 @@
   --sidebar-ring: oklch(0.556 0 0);
 }
 
-@layer components {
-  .flex-center {
-    @apply flex justify-between items-center;
-  }
-}
-
 @layer base {
   * {
     @apply border-border outline-ring/50;
@@ -144,4 +139,19 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@layer components {
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+}
+
+
+.box::before {
+  content: var(--char);
+}
+
+.button:hover .box::before {
+  transform: translateY(0) !important;
 }

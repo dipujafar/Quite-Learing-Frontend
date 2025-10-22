@@ -3,6 +3,8 @@ import { Open_Sans, Montserrat } from "next/font/google";
 import "./globals.css";
 import TopBarInfoAndLinks from "@/components/shared/TopBarInfoAndLinks";
 import Navbar from "@/components/shared/navbar/Navbar";
+import Container from "@/components/shared/Container";
+import Footer from "@/components/shared/Footer";
 
 const openSans = Open_Sans({
   variable: "--font-openSans",
@@ -40,7 +42,8 @@ export default function RootLayout({
         <div>
           <Navbar />
         </div>
-        {children}
+        <Container className="min-h-[calc(100vh-190px)]">{children}</Container>
+        <Footer />
       </body>
     </html>
   );
