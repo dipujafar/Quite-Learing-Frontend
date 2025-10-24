@@ -6,15 +6,15 @@ import Link from "next/link";
 
 export default function Footer() {
   return (
-    <div>
-      <Container
-        style={{
-          backgroundImage: `url(${waterMarkImage.src})`,
-          backgroundSize: "cover",
-          backgroundRepeat: "no-repeat",
-          backgroundPosition: "center",
-        }}
-      >
+    <div
+      style={{
+        backgroundImage: `url(${waterMarkImage.src})`,
+        backgroundSize: "cover",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "center",
+      }}
+    >
+      <Container>
         {/* 
         Use style prop with template literal — Next.js resolves the imported image path.
         Tailwind handles positioning & sizing.
@@ -23,12 +23,15 @@ export default function Footer() {
           <Image src={learningImg} alt="Learning" className="z-10" />
         </div>
       </Container>
+      <hr />
       <Container>
-        <hr />
         <div className="flex justify-between text-primary-gray mt-2">
           <p>© 2025 Bombon by Marketly. All rights reserved.</p>
           <div className="lg:space-x-4 space-x-2">
-            <Link href={"/privacy-policy"} className="hover:text-black duration-500">
+            <Link
+              href={"/privacy-policy"}
+              className="hover:text-black duration-500"
+            >
               Privacy Policy
             </Link>
             <Link href={"/terms-use"} className="hover:text-black duration-500">
