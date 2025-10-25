@@ -42,7 +42,11 @@ export default function RootLayout({
         <div>
           <Navbar />
         </div>
-        <Container className="min-h-[calc(100vh-190px)]">{children}</Container>
+        <div className="xl:py-16 md:py-10 py-8">
+          <Container className="min-h-[calc(100vh-190px)]">
+            {children}
+          </Container>
+        </div>
         <Footer />
       </body>
     </html>

@@ -15,7 +15,7 @@ export default function NavLinks() {
   return (
     <div className="flex gap-x-2">
       {navLinks.map((link) => (
-        <div key={link.link} className="flex-center flex-col  w-[100px] group">
+        <div key={link.link} className="flex-center flex-col  w-[104px] group">
           <Link
             href={link?.link}
             className={cn(

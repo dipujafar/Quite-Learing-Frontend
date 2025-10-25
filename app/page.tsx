@@ -7,7 +7,7 @@ import HowItWorksEarningContainer from "@/components/modules/HowItWorksEarning/H
 
 export default function Home() {
   return (
-    <div className="xl:py-16 md:py-10 py-8 xl:space-y-16 md:space-y-10 space-y-6">
+    <div className=" xl:space-y-16 md:space-y-10 space-y-6">
       <HeroContainer />
       <div className="xl:space-y-10 space-y-6 ">
         <HowItWorksAssignmentContainer />
