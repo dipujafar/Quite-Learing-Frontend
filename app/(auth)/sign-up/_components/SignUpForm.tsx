@@ -71,7 +71,7 @@ export function SignUpForm() {
                   <Input
                     placeholder="Enter username"
                     type="text"
-                    className="bg-[#d2b45012] border-0 text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
+                    className="bg-[#d2b45012]  text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
                     {...field}
                   />
                 </FormControl>
@@ -92,7 +92,7 @@ export function SignUpForm() {
                   <Input
                     placeholder="Enter your phone number"
                     type="tel"
-                    className="bg-[#d2b45012] border-0 text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
+                    className="bg-[#d2b45012]  text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
                     {...field}
                   />
                 </FormControl>
@@ -113,7 +113,7 @@ export function SignUpForm() {
                   <Input
                     placeholder="Enter your email address"
                     type="email"
-                    className="bg-[#d2b45012] border-0 text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
+                    className="bg-[#d2b45012]  text-foreground placeholder:text-muted-foreground h-12 rounded-lg border"
                     {...field}
                   />
                 </FormControl>
@@ -135,7 +135,7 @@ export function SignUpForm() {
                     <Input
                       placeholder="Enter your password"
                       type={showPassword ? "text" : "password"}
-                      className="bg-[#d2b45012] border-0 text-foreground placeholder:text-muted-foreground h-12 rounded-lg pr-12 border"
+                      className="bg-[#d2b45012]  text-foreground placeholder:text-muted-foreground h-12 rounded-lg pr-12 border"
                       {...field}
                     />
                     <button

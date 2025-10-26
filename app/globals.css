@@ -145,8 +145,10 @@
   .flex-center {
     @apply flex justify-center items-center;
   }
+  .section-title {
+    @apply md:text-3xl text-2xl lg:text-[40px] xl:text-[50px] 2xl:text-[60px]  text-[#06051799]  font-medium  text-center;
+  }
 }
-
 
 .box::before {
   content: var(--char);
@@ -157,4 +159,24 @@
 }
 .scroll-hide::-webkit-scrollbar {
   display: none;
+}
+
+/* pagination related styles */
+.rpb-item {
+  border: 1px solid lightgray !important;
+  border-radius: 16px !important;
+}
+
+.rpb-item:hover {
+  border: 2px solid #584c22 !important;
+  border-radius: 16px !important;
+  transition: all 0.2s ease-in-out;
+}
+
+.rpb-item--active {
+  background-color: #584c22 !important;
+}
+
+.scroll-hide::-webkit-scrollbar {
+  scrollbar-width: none;
 }

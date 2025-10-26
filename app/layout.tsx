@@ -5,6 +5,7 @@ import TopBarInfoAndLinks from "@/components/shared/TopBarInfoAndLinks";
 import Navbar from "@/components/shared/navbar/Navbar";
 import Container from "@/components/shared/Container";
 import Footer from "@/components/shared/Footer";
+import "react-pagination-bar/dist/index.css";
 
 const openSans = Open_Sans({
   variable: "--font-openSans",
