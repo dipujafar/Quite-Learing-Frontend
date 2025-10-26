@@ -1,11 +1,13 @@
 "use client"
-import { AssignmentCard } from "@/components/cards/TaskCard"
+import { TaskCard } from "@/components/cards/TaskCard"
 import PaginationSection from "@/components/shared/PaginationSection"
 import { Input } from "@/components/ui/input"
 import { assignments } from "@/data/dummyData"
 import { Search } from "lucide-react"
+import { useRouter } from "next/navigation"
 
 export default function TaskManagementContainer() {
+    const router = useRouter()
 
 
     return (
@@ -16,12 +18,13 @@ export default function TaskManagementContainer() {
             </div>
             <div className="space-y-4">
                 {assignments.map((assignment, index) => (
-                    <AssignmentCard
-                        key={index}
-                        {...assignment}
-                        onReject={() => console.log("Rejected:", assignment.id)}
-                        onAccept={() => console.log("Accepted:", assignment.id)}
-                    />
+                    <div key={index} className="cursor-pointer" onClick={() => router.push("/student/task-management/1")}>
+                        <TaskCard
+                            {...assignment}
+                            onReject={() => console.log("Rejected:", assignment.id)}
+                            onAccept={() => console.log("Accepted:", assignment.id)}
+                        />
+                    </div>
                 ))}
                 <PaginationSection />
             </div>

@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 
-interface AssignmentCardProps {
+interface TaskCardProps {
     userId: string
     title: string
     subject: string
@@ -16,7 +16,7 @@ interface AssignmentCardProps {
     onAccept?: () => void
 }
 
-export function AssignmentCard({
+export function TaskCard({
     userId,
     title,
     subject,
@@ -27,7 +27,7 @@ export function AssignmentCard({
     status = "accept",
     onReject,
     onAccept,
-}: AssignmentCardProps) {
+}: TaskCardProps) {
     return (
         <Card className="p-6 border border-gray-200 rounded-2xl bg-[#d2b4500d] gap-3">
             {/* Header */}
