@@ -3,33 +3,25 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-const navLinks = [
-  {
-    label: "Profile",
-    link: "/student/profile",
-  },
-  {
-    label: "Task Management ",
-    link: "/student/task-management",
-  },
-  {
-    label: "Settings",
-    link: "/student/settings",
-  },
-];
 
-export default function DashboardNavLinks() {
+type TNavLinks = {
+  label: string;
+  link: string;
+}
+
+
+export default function DashboardNavLinks({ data }: { data: TNavLinks[] }) {
   const pathName = usePathname();
-  console.log(pathName);
+
   return (
     <div className="border-r-2 border-black/20 w-full pr-6 h-full">
       <div>
-        {navLinks.map((link) => (
+        {data.map((link) => (
           <div key={link.link}>
             <div
               className={cn(
                 "text-primary-color px-2 ",
-                pathName === link.link && "bg-primary-color text-white py-2 rounded-md"
+                pathName.includes(link?.link) && "bg-primary-color text-white py-2 rounded-md"
               )}
             >
               <p>

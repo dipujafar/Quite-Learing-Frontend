@@ -14,7 +14,7 @@ export default function TaskManagementContainer() {
         <div className="lg:space-y-8 space-y-5">
             <div className="relative">
                 <Search color="#5c5656" className="absolute  top-1/2 left-2 -translate-y-1/2" />
-                <Input placeholder="search task..." className="bg-slate-50 h-12 pl-9" />
+                <Input placeholder="Search task..." className="bg-slate-50 h-12 pl-9" />
             </div>
             <div className="space-y-4">
                 {assignments.map((assignment, index) => (

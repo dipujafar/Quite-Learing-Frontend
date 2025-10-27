@@ -1,7 +1,6 @@
 "use client"
-
-import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
+import TaskCardActionBtn from "./TaskCardActionBtn"
 
 interface TaskCardProps {
     userId: string
@@ -47,7 +46,7 @@ export function TaskCard({
                         <span >Subject:</span> {subject}
                     </p>
                     <p className="space-x-2">
-                        <span >Description (Optional):</span>
+                        <span >Description:</span>
 
                         <span> {description}</span>
                     </p>
@@ -66,30 +65,8 @@ export function TaskCard({
             </div>
 
             {/* Action Buttons */}
-            <div className="flex gap-4">
-                {status === "completed" ? (
-                    <div className="w-full text-center md:py-2 py-1 bg-[#6b350017] rounded-lg">
-                        <p className="text-[#6B3500] font-medium">Completed</p>
-                    </div>
-                ) : (
-                    <>
-                        <Button
-                            onClick={onReject}
-                            variant="outline"
-                            className="flex-1 bg-[#e2000017] text-[#E20000] border-red-200 hover:bg-red-100 cursor-pointer"
-                        >
-                            Reject
-                        </Button>
-                        <Button
-                            onClick={onAccept}
-                            variant="outline"
-                            className="flex-1 bg-[#6b350017] text-[#6B3500] border-[#6b350017] hover:bg-[#673a0d17] cursor-pointer"
-                        >
-                            Accept Delivery
-                        </Button>
-                    </>
-                )}
-            </div>
+            <TaskCardActionBtn status={status} onReject={onReject} onAccept={onAccept} />
+          
         </Card>
     )
 }

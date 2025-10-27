@@ -6,6 +6,8 @@ import Navbar from "@/components/shared/navbar/Navbar";
 import Container from "@/components/shared/Container";
 import Footer from "@/components/shared/Footer";
 import "react-pagination-bar/dist/index.css";
+import Providers from "@/lib/Providers";
+import { Toaster } from 'sonner';
 
 const openSans = Open_Sans({
   variable: "--font-openSans",
@@ -37,18 +39,21 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.className} ${montserrat.variable} antialiased`}
+        className={`${openSans.className} ${montserrat.variable} antialiased bg-[#FCFCFC]`}
       >
-        <TopBarInfoAndLinks />
-        <div>
-          <Navbar />
-        </div>
-        <div className="xl:py-16 md:py-10 py-8">
-          <Container className="min-h-[calc(100vh-190px)]">
-            {children}
-          </Container>
-        </div>
-        <Footer />
+        <Providers>
+          <TopBarInfoAndLinks />
+          <div>
+            <Navbar />
+          </div>
+          <div className="xl:py-16 md:py-10 py-8">
+            <Container className="min-h-[calc(100vh-190px)]">
+              {children}
+            </Container>
+          </div>
+          <Footer />
+          <Toaster />
+        </Providers>
       </body>
     </html>
   );

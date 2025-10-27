@@ -71,7 +71,7 @@ export function SubmissionReviewCard({
                         <div>
                             <div className="flex items-center gap-2">
                                 <p className="font-semibold">{username}</p>
-                                {status && <Badge className={statusColors[status]}>{status}</Badge>}
+                                {status !== "Pending" && <Badge className={statusColors[status!]}>{status}</Badge>}
                             </div>
                         </div>
                     </div>
@@ -94,14 +94,14 @@ export function SubmissionReviewCard({
                     {/* Attachments - Right Side (1 column) */}
                     <div>
                         <h4 className="text-sm text-[#6A7282] font-semibold mb-1">Attachments</h4>
-                        <div className="space-y-2 bg-white w-fit rounded-md">
+                        <div className="space-y-2 bg-white w-fit rounded-md border-2">
                             {attachments.map((attachment, index) => (
                                 <button
                                     key={index}
                                     onClick={() => handleDownload(attachment)}
-                                    className="flex items-center gap-2 p-2 rounded-md hover:bg-muted transition-colors w-full text-left"
+                                    className="flex items-center gap-2 px-2 py-1.5 rounded-md hover:bg-muted transition-colors w-full text-left cursor-pointer"
                                 >
-                                    <Download className="w-4 h-4 text-muted-foreground flex-shrink-0" />
+                                    <Download className="w-4 h-4 text-muted-foreground shrink-0" />
                                     <span className="text-sm text-muted-foreground truncate hover:text-foreground">
                                         {attachment.name}
                                     </span>
@@ -125,7 +125,7 @@ export function SubmissionReviewCard({
                 </div>
 
                 {/* Action Buttons */}
-                <div className="flex gap-4">
+              { status === "Pending" &&  <div className="flex gap-4">
 
                     <>
                         <Button
@@ -144,7 +144,7 @@ export function SubmissionReviewCard({
                         </Button>
                     </>
 
-                </div>
+                </div>}
 
 
 

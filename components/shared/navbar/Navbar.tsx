@@ -14,7 +14,7 @@ export default function Navbar() {
         </Link>
         <NavActionButton />
       </Container>
-      <hr className="h-px w-full border-0 bg-gradient-to-r from-[#D2B450] via-[#f5e6b0] to-[#fdf6da]" />
+      <hr className="h-px w-full border-0 bg-linear-to-r from-[#D2B450] via-[#f5e6b0] to-[#fdf6da]" />
     </div>
   );
 }

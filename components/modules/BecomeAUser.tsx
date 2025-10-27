@@ -27,7 +27,7 @@ export default function BecomeAUser() {
             <p className="xl:text-3xl lg:text-xl md:text-sm text-base font-semibold group-hover:rounded-2xl md:group-hover:text-4xl group-hover:text-xl duration-1000">
               Too Many Assignments, Not Enough Time? Let Us Help!
             </p>
-            <Link href={"/"}>
+            <Link href={"/sign-in?role=student"}>
               <AnimatedBgFillBtn text="Post an Assignment" />
             </Link>
           </div>
@@ -52,7 +52,7 @@ export default function BecomeAUser() {
              Get Paid to Do What You’re Good At—No Bosses, No Drama!
             </p>
             <div className="flex justify-end">
-            <Link href={"/"}>
+            <Link href={"/sign-in?role=worker"}>
               <AnimatedBgFillBtn text="Become a Worker" />
             </Link>
             </div>

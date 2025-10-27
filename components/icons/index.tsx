@@ -176,3 +176,50 @@ export function XIcon2({ className }: { className?: string }) {
     </svg>
   );
 }
+
+export function GrowthIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+      <path d="M11.1992 4.90039H15.3992V9.10039" stroke="#00A63E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M15.4004 4.90039L9.45039 10.8504L5.95039 7.35039L1.40039 11.9004" stroke="#00A63E" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+  );
+}
+export function WalletIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+      <g clip-path="url(#clip0_48758_10219)">
+        <path d="M13.3016 4.90059V2.80059C13.3016 2.61493 13.2278 2.43689 13.0965 2.30561C12.9653 2.17434 12.7872 2.10059 12.6016 2.10059H3.50156C3.13026 2.10059 2.77416 2.24809 2.51161 2.51064C2.24906 2.77319 2.10156 3.12928 2.10156 3.50059C2.10156 3.87189 2.24906 4.22798 2.51161 4.49054C2.77416 4.75309 3.13026 4.90059 3.50156 4.90059H14.0016C14.1872 4.90059 14.3653 4.97434 14.4965 5.10561C14.6278 5.23689 14.7016 5.41493 14.7016 5.60059V8.40059M14.7016 8.40059H12.6016C12.2303 8.40059 11.8742 8.54809 11.6116 8.81064C11.3491 9.07319 11.2016 9.42928 11.2016 9.80059C11.2016 10.1719 11.3491 10.528 11.6116 10.7905C11.8742 11.0531 12.2303 11.2006 12.6016 11.2006H14.7016C14.8872 11.2006 15.0653 11.1268 15.1965 10.9956C15.3278 10.8643 15.4016 10.6862 15.4016 10.5006V9.10059C15.4016 8.91493 15.3278 8.73689 15.1965 8.60561C15.0653 8.47434 14.8872 8.40059 14.7016 8.40059Z" stroke="#155DFC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+        <path d="M2.10156 3.5V13.3C2.10156 13.6713 2.24906 14.0274 2.51161 14.2899C2.77416 14.5525 3.13026 14.7 3.50156 14.7H14.0016C14.1872 14.7 14.3653 14.6263 14.4965 14.495C14.6278 14.3637 14.7016 14.1857 14.7016 14V11.2" stroke="#155DFC" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      </g>
+      <defs>
+        <clipPath id="clip0_48758_10219">
+          <rect width="16.8" height="16.8" fill="white" />
+        </clipPath>
+      </defs>
+    </svg>
+
+  );
+}
+
+export function DownloadIcon({ className }: { className?: string }) {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 17 17" fill="none">
+      <path d="M8.39844 11.9006V2.10059" stroke="#9810FA" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4.19922 7.7002L8.39922 11.9002L12.5992 7.7002" stroke="#9810FA" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M13.3 14.7002H3.5" stroke="#9810FA" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+  );
+}
+export function DownloadIcon2({ className }: { className?: string }) {
+  return (
+    <svg className={className} xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+      <path d="M7.78906 11.0345V1.94727" stroke="#717182" stroke-width="1.29818" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M3.89453 7.14062L7.78906 11.0352L11.6836 7.14062" stroke="#717182" stroke-width="1.29818" stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M12.3333 13.6309H3.24609" stroke="#717182" stroke-width="1.29818" stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+
+  );
+}

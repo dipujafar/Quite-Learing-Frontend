@@ -16,6 +16,10 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
+import { useAppDispatch } from "@/redux/hooks";
+import { setUser } from "@/redux/features/authSlice";
+import { useSearchParams } from "next/navigation";
+import { toast } from "sonner";
 
 const signInSchema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -26,6 +30,8 @@ type SignInFormValues = z.infer<typeof signInSchema>;
 
 export function SignInForm() {
   const [showPassword, setShowPassword] = useState(false);
+  const dispatch = useAppDispatch();
+  const role = useSearchParams().get("role");
 
   const form = useForm<SignInFormValues>({
     resolver: zodResolver(signInSchema),
@@ -37,6 +43,14 @@ export function SignInForm() {
 
   function onSubmit(values: SignInFormValues) {
     console.log({ values });
+
+    dispatch(
+        setUser({
+          user: {...values, role},
+          token: null,
+        })
+      );
+      toast.success("Login successful!");
   }
 
   return (

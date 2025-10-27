@@ -11,7 +11,7 @@ export default function AnimatedBgFillBtn({
   className?: string;
 }) {
   return (
-    <button className={cn("flex justify-center gap-2 items-center border-primary-color  relative px-4 py-2 cursor-pointer overflow-hidden rounded-[30px] border-2 bg-transparent text-primary-color font-bold  transition-all duration-1000 ease-in-out hover:shadow-[1px_1px_200px_#584c22] hover:text-white hover:border-none after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-[10px] after:w-[10px] after:rounded-[30px] after:bg-primary-color after:invisible after:transition-all after:duration-1000 after:ease-in-out hover:after:visible hover:after:scale-[100] hover:after:translate-x-[2px] after:-z-10 z-10 group", className)}>
+    <button className={cn("flex justify-center gap-2 items-center border-primary-color  relative px-4 py-2 cursor-pointer overflow-hidden rounded-[30px] border-2 bg-transparent text-primary-color font-bold  transition-all duration-1000 ease-in-out hover:shadow-[1px_1px_200px_#584c22] hover:text-white hover:border-none after:content-[''] after:absolute after:left-0 after:bottom-0 after:h-2.5 after:w-2.5 after:rounded-[30px] after:bg-primary-color after:invisible after:transition-all after:duration-1000 after:ease-in-out hover:after:visible hover:after:scale-[100] hover:after:translate-x-0.5 after:-z-10 z-10 group", className)}>
       <span>{text}</span>
       {isSvg && (
         <svg
